@@ -20,11 +20,11 @@
             <button type="submit" class="btn btn-primary">Subir</button>
         </form>
     </div>
-    <div class="row row-cols-3 mt-5">
+    <div class="row row-cols-3 mt-5 container-fluid">
         @foreach($peliculas as $pelicula)
         <div class="col">
             <div class="card">
-                <img height="200" src="/pelicula/{{$pelicula->ruta}}">
+                <img height="450" src="/pelicula/{{$pelicula->ruta}}">
                 <div class="card-body">
                     <h5 class="card-title text-center"><strong>{{$pelicula->titulo}}</strong></h5>
                     <p class="card-text"><strong>Género:</strong> {{$pelicula->genero}}</p>
