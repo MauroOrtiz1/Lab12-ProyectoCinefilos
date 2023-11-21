@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<main>
+<div>
     <div class="container">
         <form action="{{ route('subirPelicula') }}" method="POST" enctype="multipart/form-data" class="row g-3">
             @csrf
@@ -26,7 +26,11 @@
             <div class="card">
                 <img height="200" src="/pelicula/{{$pelicula->ruta}}">
                 <div class="card-body">
-                    {{$pelicula->titulo}}
+                    <h5 class="card-title text-center"><strong>{{$pelicula->titulo}}</strong></h5>
+                    <p class="card-text"><strong>Género:</strong> {{$pelicula->genero}}</p>
+                    <p class="card-text"><strong>Sinopsis:</strong> {{$pelicula->sinopsis}}</p>
+                    <p class="card-text"><strong>Duración:</strong> {{$pelicula->duracion}}</p>
+                    <p class="card-text"><strong>Restricción:</strong> {{$pelicula->restriccion}}</p>
                     <div>
                         <small class="text-muted">{{$pelicula->created_at}}</small>
                     </div>
@@ -35,5 +39,5 @@
         </div>
         @endforeach
     </div>
-</main>
+</div>
 @endsection

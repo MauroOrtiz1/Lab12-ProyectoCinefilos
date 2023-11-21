@@ -17,7 +17,7 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/app.css'])
 </head>
 <body class="fondo">
-    <div id="app">
+    <div id="app" class="fondo">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm header">
             <div class="container">
                 <a class="navbar-brand titulo" href="{{ url('/') }}">
@@ -49,12 +49,12 @@
                                 </li>
                             @endif
                         @else
-                        <ul class="navar-nav">
+                        <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('home') }}">Inicio</a>
+                                <a class="nav-link button" href="{{ route('home') }}">Inicio</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="{{ route('peliculas') }}">Mis Peliculas</a>
+                                <a class="nav-link button" href="{{ route('peliculas') }}">Mis Películas</a>
                             </li>
                         </ul>
                             <li class="nav-item dropdown">
@@ -66,7 +66,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('Cerrar Sesion') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
